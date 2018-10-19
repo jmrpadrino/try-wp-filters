@@ -36,9 +36,25 @@ define( 'fp_PLUGIN_URI', plugins_url('', __FILE__) );
 add_shortcode('cambiar-valor', 'cambiarValor');
 function cambiarValor(){
 	$variable = 'este es el valor';
+
+	/* EL FILTRO */
 	$variable = apply_filters('cambiar-valor-variable', $variable);
+	/*----------------------------------*/
+
 	return $variable;
 }
+
+/*
+function cambiandoValor($valor){
+	$valor = 'valor cambiado';
+	return $valor;
+}
+add_filter('cambiar-valor-variable', 'cambiandoValor');
+*/
+
+/*
+[cambiar-valor]
+*/
 
 
 
